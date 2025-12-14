@@ -1,0 +1,19 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model AuditLog {
+  id                String   @id @default(uuid())
+  agentId           String   @map("agent_id")
+  interactionContent String  @map("interaction_content")
+  biasScore         Int      @map("bias_score")
+  flagged           Boolean
+  violationTags     String[] @map("violation_tags")
+  createdAt         DateTime @default(now()) @map("created_at")
+
+  @@map("audit_logs")
+}
