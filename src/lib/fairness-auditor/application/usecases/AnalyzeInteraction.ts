@@ -1,4 +1,4 @@
-import { IAuditRepository } from '../../domain/interfaces/IAuditRepository';
+import { IAuditRepository } from '../../domain/ports/IAuditRepository';
 import { AuditLog } from '../../domain/entities/AuditLog';
 
 export class AnalyzeInteraction {

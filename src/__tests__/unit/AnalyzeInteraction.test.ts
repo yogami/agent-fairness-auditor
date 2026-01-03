@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { AnalyzeInteraction } from '../../application/usecases/AnalyzeInteraction';
-import { IAuditRepository } from '../../domain/interfaces/IAuditRepository';
+import { AnalyzeInteraction } from '../../lib/fairness-auditor/application/usecases/AnalyzeInteraction';
+import { IAuditRepository } from '../../lib/fairness-auditor/domain/ports/IAuditRepository';
 
 describe('AnalyzeInteraction', () => {
     let useCase: AnalyzeInteraction;

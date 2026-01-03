@@ -1,6 +1,6 @@
 import prisma from '../db';
-import { IAuditRepository } from '../../domain/interfaces/IAuditRepository';
-import { CreateAuditLogInput, AuditLog } from '../../domain/entities/AuditLog';
+import { IAuditRepository } from '../../lib/fairness-auditor/domain/ports/IAuditRepository';
+import { CreateAuditLogInput, AuditLog } from '../../lib/fairness-auditor/domain/entities/AuditLog';
 
 export class PostgresAuditRepository implements IAuditRepository {
     async saveLog(input: CreateAuditLogInput): Promise<AuditLog> {

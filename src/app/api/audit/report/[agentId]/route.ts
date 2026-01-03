@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { GetAuditReport } from '@/application/usecases/GetAuditReport';
+import { GetAuditReport } from '@/lib/fairness-auditor/application/usecases/GetAuditReport';
 import { PostgresAuditRepository } from '@/infrastructure/repositories/PostgresAuditRepository';
 
 const repo = new PostgresAuditRepository();
